@@ -1,3 +1,3 @@
 package data;
 
-interface TO {}
+abstract class TO {}

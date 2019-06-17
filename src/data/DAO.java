@@ -24,7 +24,7 @@ class DAO {
             }
             stmt.close();
             conn.close();
-        } catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
         return listOfTransferObjects;
@@ -49,7 +49,7 @@ class DAO {
         return true;
     }
 
-    static TO createTransferObject(ResultSet rs) throws InstantiationException, IllegalAccessException {
+    private static TO createTransferObject(ResultSet rs) throws SQLException {
         return null;
     }
 
