@@ -1,6 +1,7 @@
 package controllers;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -25,28 +26,12 @@ public class MainController extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String action = request.getServletPath();
 
+        String action = request.getServletPath();
         String[] actions = action.split("/");
 
-        try {
-            switch (actions[1]) {
-                case "cliente":
-                    ClienteZone.execAction(actions[2], request, response);
-                    break;
-                    /*
-                case "fornitore":
-                    FornitoreZone.execAction(actions[2], request, response);
-                    break;
-                case "admin":
-                    AdminZone.execAction(actions[2], request, response);
-                    break;
-                     */
-                default:
-                    ;
-            }
-        } catch (ServletException | IOException ex) {
-            throw new ServletException(ex);
+        if (actions[1].equals("cliente")) {
+            ClienteZone.execAction(actions[2], request, response);
         }
 
     }
