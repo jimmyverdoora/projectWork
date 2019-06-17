@@ -2,49 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c32dcea4-b401-4c79-ad31-57b9e2e6c3c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/WEB-INF/classes/controllers/AdminZone.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WEB-INF/classes/controllers/ClienteZone.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WEB-INF/classes/controllers/FornitoreZone.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WEB-INF/classes/controllers/MainController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WEB-INF/classes/data/ArticoloDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WEB-INF/classes/data/ArticoloTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WEB-INF/classes/data/ClienteDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WEB-INF/classes/data/ClienteTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WEB-INF/classes/data/DAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WEB-INF/classes/data/FornitoreDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WEB-INF/classes/data/FornitoreTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WEB-INF/classes/data/ListinoDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WEB-INF/classes/data/ListinoTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WEB-INF/classes/data/OrdineDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WEB-INF/classes/data/OrdineTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WEB-INF/classes/data/RigaOrdineDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WEB-INF/classes/data/RigaOrdineTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WEB-INF/classes/data/TO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Error.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SearchFornitori.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectWork.iml" beforeDir="false" afterPath="$PROJECT_DIR$/projectWork.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/AdminZone.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/controllers/AdminZone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/ClienteZone.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/controllers/ClienteZone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/FornitoreZone.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/controllers/FornitoreZone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/ArticoloDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/ArticoloDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/ArticoloTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/ArticoloTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/ClienteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/ClienteDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/ClienteTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/ClienteTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/FornitoreDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/FornitoreDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/FornitoreTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/FornitoreTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/ListinoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/ListinoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/ListinoTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/ListinoTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/OrdineDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/OrdineDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/OrdineTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/OrdineTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/RigaOrdineDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/RigaOrdineDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/RigaOrdineTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/RigaOrdineTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/TO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/TO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WEB-INF/src/data/DBUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB-INF/src/data/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/DAO.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,11 +41,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WEB-INF/src/controllers/FornitoreZone.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="398">
               <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/src/data/DAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -136,6 +107,8 @@
         <option value="$PROJECT_DIR$/WEB-INF/src/controllers/MainController.java" />
         <option value="$PROJECT_DIR$/WEB-INF/src/controllers/ClienteZone.java" />
         <option value="$PROJECT_DIR$/WEB-INF/src/controllers/FornitoreZone.java" />
+        <option value="$PROJECT_DIR$/WEB-INF/src/data/DBUtil.java" />
+        <option value="$PROJECT_DIR$/WEB-INF/src/data/DAO.java" />
       </list>
     </option>
   </component>
@@ -174,13 +147,6 @@
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projectWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projectWork" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -253,7 +219,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="26" y="10" width="1868" height="1044" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.236404" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -391,16 +356,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BookList.jsp" />
     <entry file="file://$PROJECT_DIR$/index.jsp" />
-    <entry file="file://$PROJECT_DIR$/WEB-INF/src/data/DAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="15" column="63" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html" />
     <entry file="file://$PROJECT_DIR$/Error.jsp" />
     <entry file="file://$PROJECT_DIR$/META-INF/context.xml">
@@ -466,10 +421,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/src/data/DBUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#805#806#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WEB-INF/src/controllers/FornitoreZone.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
           <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/src/data/DAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

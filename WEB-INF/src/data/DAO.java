@@ -3,7 +3,6 @@ package data;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.TimeZone;
 
 class DAO {
 
@@ -11,10 +10,7 @@ class DAO {
         List<TO> listOfTransferObjects = new ArrayList<>();
         try {
 
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(
-                    "jdbc:mysql://root:root@192.168.8.55/progetto?serverTimezone=" + TimeZone.getDefault().getID());
-
+            Connection conn = DBUtil.getDataSource().getConnection();
             Statement stmt;
             stmt = conn.createStatement();
             ResultSet rs;
@@ -24,7 +20,7 @@ class DAO {
             }
             stmt.close();
             conn.close();
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return listOfTransferObjects;
@@ -33,16 +29,13 @@ class DAO {
     static boolean performDBUpdate(String query) {
         try {
 
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(
-                    "jdbc:mysql://root:root@192.168.8.55/progetto?serverTimezone=" + TimeZone.getDefault().getID());
-
+            Connection conn = DBUtil.getDataSource().getConnection();
             Statement stmt;
             stmt = conn.createStatement();
             stmt.executeUpdate(query);
             stmt.close();
             conn.close();
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return false;
         }
