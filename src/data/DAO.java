@@ -8,7 +8,7 @@ import java.util.TimeZone;
 class DAO {
 
     static List<TO> returnListOfTransferObjects(String query) {
-        List<TO> listOfTransferObjects = new ArrayList<TO>();
+        List<TO> listOfTransferObjects = new ArrayList<>();
         try {
 
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -30,9 +30,27 @@ class DAO {
         return listOfTransferObjects;
     }
 
-        static TO createTransferObject(ResultSet rs) throws InstantiationException, IllegalAccessException {
-            return null;
-        }
+    static boolean performDBUpdate(String query) {
+        try {
 
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(
+                    "jdbc:mysql://root:root@192.168.8.55/progetto?serverTimezone=" + TimeZone.getDefault().getID());
+
+            Statement stmt;
+            stmt = conn.createStatement();
+            stmt.executeUpdate(query);
+            stmt.close();
+            conn.close();
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    static TO createTransferObject(ResultSet rs) throws InstantiationException, IllegalAccessException {
+        return null;
+    }
 
 }
