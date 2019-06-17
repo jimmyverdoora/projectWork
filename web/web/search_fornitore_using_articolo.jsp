@@ -5,7 +5,6 @@
   Time: 10:22
   To change this template use File | Settings | File Templates.
 --%>
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -22,12 +21,12 @@
     <tr>
         <td width="78">Inserisci il tipo dell'articolo</td>
         <td width="6">:</td>
-        <td width="294"><input id="inserisci il tipo dell'articolo" name="tipo_articolo" type="text" /></td>
+        <td width="294"><input id="tipo_articolo" name="tipo_articolo" type="text" /></td>
     </tr>
     <tr>
         <td>Inserisci parola contnuta della descrizione</td>
         <td>:</td>
-        <td><input id="inserisci parola contnuta della descrizione" name="descrizione_articolo" type="text" /></td>
+        <td><input id="descrizione_articolo" name="descrizione_articolo" type="text" /></td>
     </tr>
     <tr>
         <td></td>
