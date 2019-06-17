@@ -6,7 +6,6 @@ import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
  * requests from the user.
  * @author kishan
  */
-@WebServlet("/")
 public class MainController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -45,7 +43,6 @@ public class MainController extends HttpServlet {
                     break;
                      */
                 default:
-                    ClienteZone.execAction(actions[2], request, response);
                     ;
             }
         } catch (ServletException | IOException ex) {
