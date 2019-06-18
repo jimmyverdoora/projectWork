@@ -17,9 +17,11 @@ class LoginEngine {
         String password = request.getParameter("password");
         String ruolo = request.getParameter("ruolo");
 
-        if (authenticate(ruolo, username, password)) {
+        int key = authenticate(ruolo, username, password);
+        if (key > -1) {
             HttpSession session = request.getSession();
             session.setAttribute("ruolo", ruolo);
+            session.setAttribute("ruoloId", key);
             response.sendRedirect(ruolo + "/home");
         }
         else {
@@ -27,7 +29,7 @@ class LoginEngine {
         }
     }
 
-    private static boolean authenticate(String ruolo, String username, String password) {
+    private static int authenticate(String ruolo, String username, String password) {
 
         if (ruolo.equals("cliente")) {
             return ClienteDAO.isClientePresent(username, password);
@@ -39,7 +41,7 @@ class LoginEngine {
             return AdminDAO.isAdminPresent(username, password);
         }
         else {
-            return false;
+            return -1;
         }
     }
 }

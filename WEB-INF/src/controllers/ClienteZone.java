@@ -1,8 +1,7 @@
 package controllers;
 
 import com.sun.corba.se.impl.oa.toa.TOA;
-import data.FornitoreDAO;
-import data.FornitoreTO;
+import data.*;
 import log.Generic;
 
 import javax.servlet.RequestDispatcher;
@@ -37,16 +36,28 @@ class ClienteZone extends Zone {
             show("/ListaFornitori.jsp", request, response);
         }
         else if (action.equals("dettagliofornitore")) {
-            show("DettaglioFornitore.jsp", request, response);
+            int id = Integer.parseInt(request.getParameter("fid"));
+            FornitoreTO fornitore = FornitoreDAO.getFornitoreById(id);
+            request.setAttribute("fornitore", fornitore);
+            List<ListinoTO> lista = ListinoDAO.getListiniByFornitoreId(id);
+            request.setAttribute("listaListini", lista);
+            show("/DettaglioFornitore.jsp", request, response);
         }
         else if (action.equals("listaarticoli")) {
-            show("ListaArticoli.jsp", request, response);
+            int id = Integer.parseInt(request.getParameter("lid"));
+            ListinoTO listino = ListinoDAO.getListinoById(id);
+            request.setAttribute("listino", listino);
+            FornitoreTO fornitore = FornitoreDAO.getFornitoreById(listino.getFornitore_id());
+            request.setAttribute("fornitore", fornitore);
+            List<ArticoloTO> lista = ArticoloDAO.getArticoliByListinoId(id);
+            request.setAttribute("listaArticoli", lista);
+            show("/ListaArticoli.jsp", request, response);
         }
         else if (action.equals("listaordini")) {
-            show("ListaOrdini.jsp", request, response);
+            show("/ListaOrdini.jsp", request, response);
         }
         else if (action.equals("ordine")) {
-            show("Ordine.jsp", request, response);
+            show("/Ordine.jsp", request, response);
         }
     }
 }

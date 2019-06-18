@@ -20,11 +20,19 @@ public class FornitoreDAO extends DAO {
         return new FornitoreTO(id, username, password, nome, descrizione, email);
     }
 
-    public static boolean isFornitorePresent(String username, String password) {
+    public static int isFornitorePresent(String username, String password) {
         String query = "SELECT * FROM progetto.fornitore WHERE username='" + username +
                 "' AND password='" + password + "';";;
-        List<TO> fornitori = returnListOfTransferObjects(query);
-        return (fornitori.size() > 0);
+        List<FornitoreTO> fornitori = castToFornitore(returnListOfTransferObjects(query));
+        if (fornitori.size() > 0) {
+            return fornitori.get(0).getId();
+        }
+        return -1;
+    }
+
+    public static FornitoreTO getFornitoreById(int id) {
+        String query = "SELECT * FROM progetto.fornitore WHERE fornitore.id=" + id + ";";
+        return castToFornitore(returnListOfTransferObjects(query)).get(0);
     }
 
     public static List<FornitoreTO> getFornitoriByNameOrDescription(String hint) {
@@ -34,7 +42,10 @@ public class FornitoreDAO extends DAO {
     }
 
     public static List<FornitoreTO> getFornitoriByArticoloNameOrDescriptionOrType(String hint) {
-        String query = ""; // TODO
+        String query = "SELECT * FROM progetto.fornitore WHERE progetto.fornitore.id IN" +
+                " (SELECT fornitore_id FROM progetto.listino WHERE progetto.listino.id IN" +
+                " (SELECT listino_id FROM progetto.articolo WHERE tipo LIKE '" + hint + "' OR descrizione LIKE '" +
+                hint + "'));";
         return castToFornitore(returnListOfTransferObjects(query));
     }
 

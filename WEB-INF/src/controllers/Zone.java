@@ -1,5 +1,7 @@
 package controllers;
 
+import log.Generic;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpServletRequest;

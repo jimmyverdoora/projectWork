@@ -20,11 +20,14 @@ public class ClienteDAO extends DAO {
         return new ClienteTO(id, username, password, nome, descrizione, email);
     }
 
-    public static boolean isClientePresent(String username, String password) {
+    public static int isClientePresent(String username, String password) {
         String query = "SELECT * FROM progetto.cliente WHERE username='" + username +
                 "' AND password='" + password + "';";;
-        List<TO> clienti = returnListOfTransferObjects(query);
-        return (clienti.size() > 0);
+        List<ClienteTO> clienti = castToCliente(returnListOfTransferObjects(query));
+        if (clienti.size() > 0) {
+            return clienti.get(0).getId();
+        }
+        return -1;
     }
 
     public static List<TO> getClientiByNameOrDescription(String hint) {
@@ -49,6 +52,14 @@ public class ClienteDAO extends DAO {
     public static boolean deleteCliente(int id) {
         String query = ""; //TODO
         return performDBUpdate(query);
+    }
+
+    private static List<ClienteTO> castToCliente(List<TO> lista) {
+        List<ClienteTO> newLista = new ArrayList<>();
+        for (TO elemento : lista) {
+            newLista.add((ClienteTO) elemento);
+        }
+        return newLista;
     }
 
     private static List<TO> returnListOfTransferObjects(String query) {

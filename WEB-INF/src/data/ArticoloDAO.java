@@ -10,7 +10,7 @@ import java.util.List;
 public class ArticoloDAO extends DAO {
 
     // main function, overrides DAO
-    static ArticoloTO createTransferObject(ResultSet rs) throws SQLException {
+    private static ArticoloTO createTransferObject(ResultSet rs) throws SQLException {
         int id = rs.getInt("id");
         int listino_id = rs.getInt("listino_id");
         double prezzo = rs.getDouble("prezzo");
@@ -20,13 +20,14 @@ public class ArticoloDAO extends DAO {
         return new ArticoloTO(id, listino_id, prezzo, nome, descrizione, tipo);
     }
 
-    static List<TO> getArticoliByListinoId(int id) {
-        String query = ""; // TODO
-        return returnListOfTransferObjects(query);
+    public static List<ArticoloTO> getArticoliByListinoId(int id) {
+        String query = "SELECT * FROM progetto.articolo WHERE progetto.articolo.listino_id=" + id + ";";
+        return castToArticolo(returnListOfTransferObjects(query));
     }
 
-    static boolean createArticolo(int id, int listino_id, double prezzo, String nome, String descrizione, String tipo) {
-        String query = ""; //TODO
+    public static boolean createArticolo(int listino_id, double prezzo, String nome, String descrizione, String tipo) {
+        String query = "INSERT INTO progetto.articolo (listino_id, prezzo, nome, descrizione, tipo) VALUES ('" +
+                listino_id + "', '" + prezzo + "', '" + nome + "', '" + descrizione + "', '" + tipo + "');";
         return performDBUpdate(query);
     }
 
@@ -39,6 +40,14 @@ public class ArticoloDAO extends DAO {
     static boolean deleteArticolo(int id) {
         String query = ""; //TODO
         return performDBUpdate(query);
+    }
+
+    private static List<ArticoloTO> castToArticolo(List<TO> lista) {
+        List<ArticoloTO> newLista = new ArrayList<>();
+        for (TO elemento : lista) {
+            newLista.add((ArticoloTO) elemento);
+        }
+        return newLista;
     }
 
     private static List<TO> returnListOfTransferObjects(String query) {

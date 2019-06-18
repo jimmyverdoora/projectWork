@@ -9,11 +9,14 @@ import java.util.List;
 
 public class AdminDAO extends DAO {
 
-    public static boolean isAdminPresent(String username, String password) {
+    public static int isAdminPresent(String username, String password) {
         String query = "SELECT * FROM progetto.admin WHERE username='" + username +
                 "' AND password='" + password + "';";
-        List<TO> admins = returnListOfTransferObjects(query);
-        return (admins.size() > 0);
+        List<AdminTO> admins = castToAdmin(returnListOfTransferObjects(query));
+        if (admins.size() > 0) {
+            return admins.get(0).getId();
+        }
+        return -1;
     }
 
     public static boolean createAdmin(String username, String password) {
@@ -27,6 +30,14 @@ public class AdminDAO extends DAO {
         String username = rs.getString("username");
         String password = rs.getString("password");
         return new AdminTO(id, username, password);
+    }
+
+    private static List<AdminTO> castToAdmin(List<TO> lista) {
+        List<AdminTO> newLista = new ArrayList<>();
+        for (TO elemento : lista) {
+            newLista.add((AdminTO) elemento);
+        }
+        return newLista;
     }
 
     private static List<TO> returnListOfTransferObjects(String query) {

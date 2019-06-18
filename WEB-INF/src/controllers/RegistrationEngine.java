@@ -21,9 +21,7 @@ class RegistrationEngine {
         String email = request.getParameter("email");
 
         if (valid(ruolo, username, password, nome, descrizione, email)) {
-            HttpSession session = request.getSession();
-            session.setAttribute("ruolo", ruolo);
-            response.sendRedirect(ruolo + "/home");
+            LoginEngine.performLogin(request, response);
         }
         else {
             response.sendRedirect("");

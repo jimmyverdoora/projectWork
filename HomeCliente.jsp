@@ -8,7 +8,7 @@
 <body>
 <center>
 </center>
-<h1>Benvenuto cliente</h1>
+<h1>Area Clienti</h1>
 <div align="center">
     <form action="listafornitori" method="post">
             <table>
@@ -37,7 +37,7 @@
                 </tr>
             </table>
         </form>
-            <h2>&nbsp;&nbsp;&nbsp;
+            <h2>
                 <a href="listaOrdini">Gestisci Ordini</a>
             </h2>
 </div>
