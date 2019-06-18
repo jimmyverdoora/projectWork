@@ -17,30 +17,39 @@ public class FornitoreDAO extends DAO {
         return new FornitoreTO(id, username, password, nome, descrizione, email);
     }
 
-    static List<TO> getFornitoriByNameOrDescription(String hint) {
+
+    public static boolean isFornitorePresent(String username, String password) {
+        String query = "SELECT * FROM progetto.fornitore WHERE username='" + username +
+                "' AND password='" + password + "';";;
+        List<TO> fornitori = returnListOfTransferObjects(query);
+        return (fornitori.size() > 0);
+    }
+
+    public static List<TO> getFornitoriByNameOrDescription(String hint) {
         String query = ""; // TODO
         return returnListOfTransferObjects(query);
     }
 
-    static List<TO> getFornitoriByArticoloNameOrDescriptionOrType(String hint) {
+    public static List<TO> getFornitoriByArticoloNameOrDescriptionOrType(String hint) {
         String query = ""; // TODO
         return returnListOfTransferObjects(query);
     }
 
-    static boolean createFornitore(int id, String username, String password, String nome, String descrizione,
+    public static boolean createFornitore(String username, String password, String nome, String descrizione,
                                    String email) {
-        String query = ""; //TODO
+        String query = "INSERT INTO progetto.fornitore (username, password, nome, descrizione, email) VALUES ('" +
+                username + "', '" + password + "', '" + nome + "', '" + descrizione + "', '" + email + "');";
         return performDBUpdate(query);
     }
 
-    static boolean editFornitore(int id, String username, String password, String nome, String descrizione,
+    public static boolean editFornitore(int id, String username, String password, String nome, String descrizione,
                                    String email) {
         // id is the id of the fornitore to be edited, the fields are the new fields, if a field is "", no edit
         String query = ""; //TODO
         return performDBUpdate(query);
     }
 
-    static boolean deleteFornitore(int id) {
+    public static boolean deleteFornitore(int id) {
         String query = ""; //TODO
         return performDBUpdate(query);
     }

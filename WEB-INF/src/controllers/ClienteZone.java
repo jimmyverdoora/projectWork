@@ -2,13 +2,12 @@ package controllers;
 
 import data.FornitoreTO;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-class ClienteZone {
+class ClienteZone extends Zone {
 
     static void execAction(String action, HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -33,11 +32,5 @@ class ClienteZone {
         else if (action.equals("ordine")) {
             show("Ordine.jsp", request, response);
         }
-    }
-
-    private static void show(String pagename, HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher(pagename);
-        dispatcher.forward(request, response);
     }
 }

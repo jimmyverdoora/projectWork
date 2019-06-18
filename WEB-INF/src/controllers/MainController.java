@@ -11,11 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * This servlet acts as a page controller for the application, handling all
- * requests from the user.
- * @author kishan
- */
+
 public class MainController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -30,10 +26,35 @@ public class MainController extends HttpServlet {
         String action = request.getServletPath();
         String[] actions = action.split("/");
 
-        if (actions[1].equals("cliente")) {
-            ClienteZone.execAction(actions[2], request, response);
+        if (actions.length < 2) {
+            showHome(request, response);
         }
 
+        if (actions[1].equals("cliente") && request.getSession().getAttribute("ruolo").equals("cliente")) {
+            ClienteZone.execAction(actions[2], request, response);
+        }
+        else if (actions[1].equals("fornitore") && request.getSession().getAttribute("ruolo").equals("fornitore")) {
+            FornitoreZone.execAction(actions[2], request, response);
+        }
+        else if (actions[1].equals("admin") && request.getSession().getAttribute("ruolo").equals("admin")) {
+            AdminZone.execAction(actions[2], request, response);
+        }
+        else if (actions[1].equals("dologin")) {
+            LoginEngine.performLogin(request, response);
+        }
+        else if (actions[1].equals("doregistration")) {
+            RegistrationEngine.performRegistration(request, response);
+        }
+        else {
+            showHome(request, response);
+        }
+
+    }
+
+    private static void showHome(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("Homepage.jsp");
+        dispatcher.forward(request, response);
     }
 
 }

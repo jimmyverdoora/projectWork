@@ -17,25 +17,33 @@ public class ClienteDAO extends DAO {
         return new ClienteTO(id, username, password, nome, descrizione, email);
     }
 
-    static List<TO> getClientiByNameOrDescription(String hint) {
+    public static boolean isClientePresent(String username, String password) {
+        String query = "SELECT * FROM progetto.cliente WHERE username='" + username +
+                "' AND password='" + password + "';";;
+        List<TO> clienti = returnListOfTransferObjects(query);
+        return (clienti.size() > 0);
+    }
+
+    public static List<TO> getClientiByNameOrDescription(String hint) {
         String query = ""; // TODO
         return returnListOfTransferObjects(query);
     }
 
-    static boolean createCliente(int id, String username, String password, String nome, String descrizione,
+    public static boolean createCliente(String username, String password, String nome, String descrizione,
                                    String email) {
-        String query = ""; //TODO
+        String query = "INSERT INTO progetto.cliente (username, password, nome, descrizione, email) VALUES ('" +
+                username + "', '" + password + "', '" + nome + "', '" + descrizione + "', '" + email + "');";
         return performDBUpdate(query);
     }
 
-    static boolean editCliente(int id, String username, String password, String nome, String descrizione,
+    public static boolean editCliente(int id, String username, String password, String nome, String descrizione,
                                    String email) {
         // id is the id of the fornitore to be edited, the fields are the new fields, if a field is "", no edit
         String query = ""; //TODO
         return performDBUpdate(query);
     }
 
-    static boolean deleteCliente(int id) {
+    public static boolean deleteCliente(int id) {
         String query = ""; //TODO
         return performDBUpdate(query);
     }

@@ -1,12 +1,11 @@
 package controllers;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class FornitoreZone {
+class FornitoreZone extends Zone {
 
     static void execAction(String action, HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -30,9 +29,4 @@ public class FornitoreZone {
         }
     }
 
-    private static void show(String pagename, HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher(pagename);
-        dispatcher.forward(request, response);
-    }
 }

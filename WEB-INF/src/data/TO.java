@@ -1,3 +1,3 @@
 package data;
 
-abstract class TO {}
+class TO {}
