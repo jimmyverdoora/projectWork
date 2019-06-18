@@ -8,10 +8,6 @@
 <html>
 <head>
     <title>Lista Fornitori</title>
-    <% List<FornitoreTO> l = (ArrayList<FornitoreTO>) request.getAttribute("listaFornitori");
-    for (int i = 0; i<l.size(); i++) {
-        out.println(l.get(0));
-    } %>
 </head>
 <body>
     <h1>Lista Fornitori</h1>
@@ -28,8 +24,8 @@
 
         <c:forEach var="fornitore" items="${listaFornitori}">
             <tr>
-                <td><c:out value="${fornitore}" /></td>
-                <td><c:out value="${fornitore.Descrizione}" /></td>
+                <td><c:out value="${fornitore.nome}" /></td>
+                <td><c:out value="${fornitore.descrizione}" /></td>
                 <td><c:out value="${fornitore.email}" /></td>
                 <td>
                     <a href="dettagliofornitore?id=<c:out value='${fornitore.id}' />">Vedi</a>

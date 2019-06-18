@@ -1,14 +1,16 @@
 package data;
 
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FornitoreDAO extends DAO {
 
     // main function, overrides DAO
-    static FornitoreTO createTransferObject(ResultSet rs) throws SQLException {
+    private static TO createTransferObject(ResultSet rs) throws SQLException {
         int id = rs.getInt("id");
         String username = rs.getString("username");
         String password = rs.getString("password");
@@ -17,7 +19,6 @@ public class FornitoreDAO extends DAO {
         String email = rs.getString("email");
         return new FornitoreTO(id, username, password, nome, descrizione, email);
     }
-
 
     public static boolean isFornitorePresent(String username, String password) {
         String query = "SELECT * FROM progetto.fornitore WHERE username='" + username +
@@ -62,5 +63,25 @@ public class FornitoreDAO extends DAO {
             newLista.add((FornitoreTO) elemento);
         }
         return newLista;
+    }
+
+    private static List<TO> returnListOfTransferObjects(String query) {
+        List<TO> listOfTransferObjects = new ArrayList<>();
+        try {
+
+            Connection conn = DBUtil.getDataSource().getConnection();
+            Statement stmt;
+            stmt = conn.createStatement();
+            ResultSet rs;
+            rs = stmt.executeQuery(query);
+            while (rs.next()) {
+                listOfTransferObjects.add(createTransferObject(rs));
+            }
+            stmt.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listOfTransferObjects;
     }
 }

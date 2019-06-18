@@ -1,7 +1,10 @@
 package data;
 
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdminDAO extends DAO {
@@ -24,5 +27,25 @@ public class AdminDAO extends DAO {
         String username = rs.getString("username");
         String password = rs.getString("password");
         return new AdminTO(id, username, password);
+    }
+
+    private static List<TO> returnListOfTransferObjects(String query) {
+        List<TO> listOfTransferObjects = new ArrayList<>();
+        try {
+
+            Connection conn = DBUtil.getDataSource().getConnection();
+            Statement stmt;
+            stmt = conn.createStatement();
+            ResultSet rs;
+            rs = stmt.executeQuery(query);
+            while (rs.next()) {
+                listOfTransferObjects.add(createTransferObject(rs));
+            }
+            stmt.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listOfTransferObjects;
     }
 }

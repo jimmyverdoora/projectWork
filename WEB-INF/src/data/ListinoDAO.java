@@ -1,7 +1,10 @@
 package data;
 
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListinoDAO extends DAO {
@@ -33,5 +36,25 @@ public class ListinoDAO extends DAO {
     static boolean deleteListino(int id) {
         String query = ""; //TODO
         return performDBUpdate(query);
+    }
+
+    private static List<TO> returnListOfTransferObjects(String query) {
+        List<TO> listOfTransferObjects = new ArrayList<>();
+        try {
+
+            Connection conn = DBUtil.getDataSource().getConnection();
+            Statement stmt;
+            stmt = conn.createStatement();
+            ResultSet rs;
+            rs = stmt.executeQuery(query);
+            while (rs.next()) {
+                listOfTransferObjects.add(createTransferObject(rs));
+            }
+            stmt.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listOfTransferObjects;
     }
 }

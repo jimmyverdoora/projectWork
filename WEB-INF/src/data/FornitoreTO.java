@@ -18,6 +18,18 @@ public class FornitoreTO implements TO{
         this.email = email;
     }
 
+    @Override
+    public String toString() {
+        return "FornitoreTO{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", nome='" + nome + '\'' +
+                ", descrizione='" + descrizione + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
+
     public int getId() {
         return id;
     }

@@ -3,6 +3,7 @@ package controllers;
 import com.sun.corba.se.impl.oa.toa.TOA;
 import data.FornitoreDAO;
 import data.FornitoreTO;
+import log.Generic;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -33,7 +34,7 @@ class ClienteZone extends Zone {
                 lista = FornitoreDAO.getFornitoriByNameOrDescription(parolaChiave);
             }
             request.setAttribute("listaFornitori", lista);
-            show("/ListaFornitori.jsp?a=1", request, response);
+            show("/ListaFornitori.jsp", request, response);
         }
         else if (action.equals("dettagliofornitore")) {
             show("DettaglioFornitore.jsp", request, response);
