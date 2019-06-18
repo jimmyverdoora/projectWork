@@ -1,6 +1,6 @@
 package data;
 
-public class AdminTO extends TO{
+public class AdminTO implements TO{
 
     private int id;
     private String username;

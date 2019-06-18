@@ -20,10 +20,10 @@ class LoginEngine {
         if (authenticate(ruolo, username, password)) {
             HttpSession session = request.getSession();
             session.setAttribute("ruolo", ruolo);
-            response.sendRedirect("/" + ruolo + "/home");
+            response.sendRedirect(ruolo + "/home");
         }
         else {
-            response.sendRedirect("/");
+            response.sendRedirect("");
         }
     }
 

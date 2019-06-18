@@ -26,9 +26,6 @@ public class MainController extends HttpServlet {
         String action = request.getServletPath();
         String[] actions = action.split("/");
 
-        if (actions.length < 2) {
-            showHome(request, response);
-        }
 
         if (actions[1].equals("cliente") && request.getSession().getAttribute("ruolo").equals("cliente")) {
             ClienteZone.execAction(actions[2], request, response);
@@ -53,7 +50,7 @@ public class MainController extends HttpServlet {
 
     private static void showHome(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("Homepage.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/Homepage.jsp");
         dispatcher.forward(request, response);
     }
 

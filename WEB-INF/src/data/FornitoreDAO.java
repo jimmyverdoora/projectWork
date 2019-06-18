@@ -2,6 +2,7 @@ package data;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class FornitoreDAO extends DAO {
@@ -25,14 +26,15 @@ public class FornitoreDAO extends DAO {
         return (fornitori.size() > 0);
     }
 
-    public static List<TO> getFornitoriByNameOrDescription(String hint) {
-        String query = ""; // TODO
-        return returnListOfTransferObjects(query);
+    public static List<FornitoreTO> getFornitoriByNameOrDescription(String hint) {
+        String query = "SELECT * FROM progetto.fornitore WHERE nome LIKE '" + hint + "' OR descrizione LIKE '" +
+                hint + "';";
+        return castToFornitore(returnListOfTransferObjects(query));
     }
 
-    public static List<TO> getFornitoriByArticoloNameOrDescriptionOrType(String hint) {
+    public static List<FornitoreTO> getFornitoriByArticoloNameOrDescriptionOrType(String hint) {
         String query = ""; // TODO
-        return returnListOfTransferObjects(query);
+        return castToFornitore(returnListOfTransferObjects(query));
     }
 
     public static boolean createFornitore(String username, String password, String nome, String descrizione,
@@ -52,5 +54,13 @@ public class FornitoreDAO extends DAO {
     public static boolean deleteFornitore(int id) {
         String query = ""; //TODO
         return performDBUpdate(query);
+    }
+
+    private static List<FornitoreTO> castToFornitore(List<TO> lista) {
+        List<FornitoreTO> newLista = new ArrayList<>();
+        for (TO elemento : lista) {
+            newLista.add((FornitoreTO) elemento);
+        }
+        return newLista;
     }
 }

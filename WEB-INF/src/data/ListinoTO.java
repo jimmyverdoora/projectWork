@@ -1,6 +1,6 @@
 package data;
 
-public class ListinoTO extends TO{
+public class ListinoTO implements TO{
 
     private int id;
     private int fornitore_id;

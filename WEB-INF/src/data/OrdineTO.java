@@ -1,6 +1,6 @@
 package data;
 
-public class OrdineTO extends TO{
+public class OrdineTO implements TO{
 
     private int id;
     private int cliente_id;

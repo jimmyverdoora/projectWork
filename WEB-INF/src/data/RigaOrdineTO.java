@@ -1,6 +1,6 @@
 package data;
 
-public class RigaOrdineTO extends TO{
+public class RigaOrdineTO implements TO{
 
     private int id;
     private int ordine_id;

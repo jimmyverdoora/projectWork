@@ -23,10 +23,10 @@ class RegistrationEngine {
         if (valid(ruolo, username, password, nome, descrizione, email)) {
             HttpSession session = request.getSession();
             session.setAttribute("ruolo", ruolo);
-            response.sendRedirect("/" + ruolo + "/home");
+            response.sendRedirect(ruolo + "/home");
         }
         else {
-            response.sendRedirect("/");
+            response.sendRedirect("");
         }
     }
 

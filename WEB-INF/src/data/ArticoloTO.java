@@ -1,6 +1,6 @@
 package data;
 
-public class ArticoloTO extends TO{
+public class ArticoloTO implements TO{
 
     private int id;
     private int listino_id;

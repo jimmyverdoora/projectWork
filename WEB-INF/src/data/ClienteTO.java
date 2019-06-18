@@ -1,6 +1,6 @@
 package data;
 
-public class ClienteTO extends TO{
+public class ClienteTO implements TO{
 
     private int id;
     private String username;

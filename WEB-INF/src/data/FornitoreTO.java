@@ -1,6 +1,6 @@
 package data;
 
-public class FornitoreTO extends TO{
+public class FornitoreTO implements TO{
 
     private int id;
     private String username;
