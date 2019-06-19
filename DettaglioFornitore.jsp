@@ -3,12 +3,19 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <title>Listini Fornitore</title>
+    <title>Fornitori</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css" type="text/css">
 </head>
 <body>
+
+<div class="myContainer" align="center">
+
+<h1>Area Clienti</h1>
+<h3>Fornitore ${fornitore.nome}</h3>
+<p>${fornitore.descrizione}</p>
     <table>
-        <h1>Fornitore ${fornitore.nome}</h1>
-        <p>${fornitore.descrizione}</p>
+
         <tr>
             <th>Nome</th>
             <th>Descrizione</th>
@@ -21,10 +28,12 @@
                 <td>
                     <form action="listaarticoli" method="post">
                         <input type="hidden" name="lid" value="${listino.id}">
-                        <input name="Submit" type="submit" value="Vedi">
+                        <input class="btn btn-primary" name="Submit" type="submit" value="Vedi">
                     </form>
                 </td>
             </tr>
         </c:forEach>
+
+    </div>
 </body>
 </html>

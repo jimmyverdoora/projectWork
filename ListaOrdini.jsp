@@ -1,56 +1,49 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Aula
-  Date: 18/06/2019
-  Time: 11:00
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-         pageEncoding="ISO-8859-1"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Insert title here</title>
+    <title>Cliente</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css" type="text/css">
 </head>
 <body>
 
-    <table>
-        <h1>I Tuoi Ordini</h1>
-        <tr>
-            <th>Id Ordine</th>
-            <th>Seleziona</th>
-        </tr>
+<div class="myContainer2" align="center">
+
+<h1>Area Clienti</h1>
+
+<div class="container">
+<div class="row">
+<div class="col-6">
+<h3>Nuovo Ordine</h3>
+<form method="post" action="upload" enctype="multipart/form-data">
+
+    <div class="my-3">
+    <input class="btn btn-primary" type="file" name="uploadedxml">
+    </div>
+    <input class="btn btn-primary" type=submit value=Invia>
+    <input class="btn btn-primary" type=reset value=Cancella></td>
+
+</form>
+</div>
+<div class="col-6">
+<h3 class="mb-3">I tuoi Ordini</h3>
 
         <c:forEach var="ordine" items="${listaOrdini}">
-            <tr>
-                <td><c:out value="${ordine.id}" /></td>
-                <td>
-                    <form action="ordine" method="post">
-                        <input type="hidden" name="ordineId" value="${ordine.id}">
-                        <input name="Submit" type="submit" value="Vedi">
-                    </form>
-                </td>
-            </tr>
+            <form action="ordine" method="post">
+                <input type="hidden" name="ordineId" value="${ordine.id}">
+                <input class="btn btn-primary mb-2" name="Submit" type="submit" value="Ordine numero ${ordine.id}">
+            </form>
+
         </c:forEach>
 
     </table>
 
-<form method="post" action="upload" enctype="multipart/form-data">
+</div>
+</div>
+</div>
 
-    <TABLE>
-
-        <tr>
-            <td>Upload xml:</td>
-            <TD><input type="file" name="uploadedxml"></TD>
-        </tr>
-        <tr>
-            <td colspan=2 align=center><input type=submit value=Invia><input
-                    type=reset value=Cancella></td>
-        </tr>
-    </TABLE>
-</form>
+</div>
 </body>
 </html>

@@ -1,5 +1,7 @@
 package controllers;
 
+import log.Generic;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -23,9 +25,13 @@ public class MainController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String action = request.getServletPath();
+        String action = request.getRequestURI();
+        Generic.log("a", "b", action);
         String[] actions = action.split("/");
-
+        actions[1] = actions[2];
+        if (actions.length > 3) {
+            actions[2] = actions[3];
+        }
 
         if (actions[1].equals("cliente") && request.getSession().getAttribute("ruolo").equals("cliente")) {
             ClienteZone.execAction(actions[2], request, response);
@@ -50,7 +56,7 @@ public class MainController extends HttpServlet {
 
     private static void showHome(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/Homepage.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
         dispatcher.forward(request, response);
     }
 

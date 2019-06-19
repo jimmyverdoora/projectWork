@@ -4,42 +4,34 @@
 <html>
 <head>
     <title>Cliente</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css" type="text/css">
 </head>
 <body>
-<center>
-</center>
+
+<div class="myContainer" align="center">
+
 <h1>Area Clienti</h1>
-<div align="center">
-    <form action="listafornitori" method="post">
-            <table>
-                <caption>
-                    <h2>
-                        Ricerca Fornitore
-                    </h2>
-                </caption>
-                <tr>
-                    <td>Parola chiave</td>
-                    <td>:</td>
-                    <td><input id="parolaChiave" type="text" name="parolaChiave"/></td>
-                </tr>
-                <tr>
-                    <td>Cerca per</td>
-                    <td>:</td>
-                    <td><select name="ruolo">
-                        <option value="fornitore">Fornitore</option>
-                        <option value="articolo">Articolo</option>
-                        </select></td>
-                <tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td><input name="Submit" type="submit" value="Cerca" /></td>
-                </tr>
-            </table>
-        </form>
-            <h2>
+
+<h3>Ricerca Fornitori</h3>
+
+<form class="mb-5" action="listafornitori" method="post">
+  <div class="form-group">
+    <input type="text" name="parolaChiave" class="form-control" id="exampleFormControlInput1" placeholder="Parola Chiave">
+  </div>
+  <div class="form-group">
+    <select class="form-control" id="exampleFormControlSelect1" name="ruolo">
+        <option value="fornitore">Ricerca per Fornitore</option>
+        <option value="articolo">Ricerca per Articolo</option>
+    </select>
+  </div>
+  <input class="btn btn-primary" type="submit" value="Cerca">
+</form>
+
+            <h3>
                 <a href="listaordini">Gestisci Ordini</a>
-            </h2>
+            </h3>
+</div>
 </div>
 </body>
 </html>

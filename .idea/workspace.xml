@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c32dcea4-b401-4c79-ad31-57b9e2e6c3c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ListaOrdiniFornitore.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrdineFornitore.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeFornitore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/HomeFornitore.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DettaglioFornitore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/DettaglioFornitore.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeCliente.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/HomeCliente.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ListaArticoli.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ListaArticoli.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ListaArticoliFornitore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ListaArticoliFornitore.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/src/controllers/FornitoreZone.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/controllers/FornitoreZone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/src/data/ArticoloDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/ArticoloDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/src/data/ArticoloTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/ArticoloTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/src/data/OrdineDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/OrdineDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/src/data/RigaOrdineDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/RigaOrdineDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ListaFornitori.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ListaFornitori.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ListaOrdini.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ListaOrdini.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ordine.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Ordine.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB-INF/src/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/web.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,79 +27,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WEB-INF/src/controllers/ClienteZone.java">
+        <entry file="file://$PROJECT_DIR$/DettaglioFornitore.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="100" selection-start-line="100" selection-end-line="100" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="88">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WEB-INF/src/controllers/FornitoreZone.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="65" column="40" lean-forward="true" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WEB-INF/src/data/RigaOrdineDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1012">
-              <caret line="51" column="70" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ListaArticoli.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OrdineFornitore.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Ordine.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Homepage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ListaOrdini.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
+            <state relative-caret-position="770">
+              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -115,12 +55,15 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/data/RigaOrdineTO.java" />
-        <option value="$PROJECT_DIR$/src/data/RigaOrdineDAO.java" />
         <option value="$PROJECT_DIR$/src/data/DAO.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/META-INF/context.xml" />
@@ -130,21 +73,16 @@
         <option value="$PROJECT_DIR$/src/controllers/ClienteZone.java" />
         <option value="$PROJECT_DIR$/Error.jsp" />
         <option value="$PROJECT_DIR$/src/controllers/MainController.java" />
-        <option value="$PROJECT_DIR$/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/WEB-INF/src/data/DBUtil.java" />
         <option value="$PROJECT_DIR$/WEB-INF/src/controllers/AdminZone.java" />
-        <option value="$PROJECT_DIR$/Homepage.jsp" />
         <option value="$PROJECT_DIR$/WEB-INF/src/data/TO.java" />
         <option value="$PROJECT_DIR$/WEB-INF/src/data/OrdineTO.java" />
         <option value="$PROJECT_DIR$/WEB-INF/src/data/ClienteTO.java" />
         <option value="$PROJECT_DIR$/WEB-INF/src/data/AdminTO.java" />
-        <option value="$PROJECT_DIR$/WEB-INF/src/controllers/MainController.java" />
         <option value="$PROJECT_DIR$/WEB-INF/src/data/FornitoreTO.java" />
         <option value="$PROJECT_DIR$/WEB-INF/src/log/Generic.java" />
-        <option value="$PROJECT_DIR$/ListaFornitori.jsp" />
         <option value="$PROJECT_DIR$/WEB-INF/src/controllers/Zone.java" />
         <option value="$PROJECT_DIR$/WEB-INF/src/data/ListinoTO.java" />
-        <option value="$PROJECT_DIR$/DettaglioFornitore.jsp" />
         <option value="$PROJECT_DIR$/WEB-INF/src/controllers/LoginEngine.java" />
         <option value="$PROJECT_DIR$/UT1.jsp" />
         <option value="$PROJECT_DIR$/META-INF/context.xml" />
@@ -152,24 +90,31 @@
         <option value="$PROJECT_DIR$/WEB-INF/src/data/ClienteDAO.java" />
         <option value="$PROJECT_DIR$/WEB-INF/src/data/ListinoDAO.java" />
         <option value="$PROJECT_DIR$/WEB-INF/src/controllers/RegistrationEngine.java" />
-        <option value="$PROJECT_DIR$/HomeCliente.jsp" />
         <option value="$PROJECT_DIR$/WEB-INF/src/pkg/WebPersonal.java" />
         <option value="$PROJECT_DIR$/WEB-INF/src/data/DAO.java" />
         <option value="$PROJECT_DIR$/WEB-INF/src/data/FornitoreDAO.java" />
-        <option value="$PROJECT_DIR$/ListaOrdini.jsp" />
         <option value="$PROJECT_DIR$/WEB-INF/src/data/RigaOrdineTO.java" />
-        <option value="$PROJECT_DIR$/Ordine.jsp" />
         <option value="$PROJECT_DIR$/WEB-INF/src/controllers/ClienteZone.java" />
         <option value="$PROJECT_DIR$/HomeFornitore.jsp" />
         <option value="$PROJECT_DIR$/WEB-INF/src/data/OrdineDAO.java" />
         <option value="$PROJECT_DIR$/ListaOrdiniFornitore.jsp" />
-        <option value="$PROJECT_DIR$/OrdineFornitore.jsp" />
         <option value="$PROJECT_DIR$/WEB-INF/src/data/RigaOrdineDAO.java" />
         <option value="$PROJECT_DIR$/WEB-INF/src/data/ArticoloTO.java" />
         <option value="$PROJECT_DIR$/ListaArticoliFornitore.jsp" />
-        <option value="$PROJECT_DIR$/ListaArticoli.jsp" />
-        <option value="$PROJECT_DIR$/WEB-INF/src/data/ArticoloDAO.java" />
         <option value="$PROJECT_DIR$/WEB-INF/src/controllers/FornitoreZone.java" />
+        <option value="$PROJECT_DIR$/OrdineFornitore.jsp" />
+        <option value="$PROJECT_DIR$/WEB-INF/src/data/ArticoloDAO.java" />
+        <option value="$PROJECT_DIR$/Homepage.jsp" />
+        <option value="$PROJECT_DIR$/WEB-INF/src/controllers/MainController.java" />
+        <option value="$PROJECT_DIR$/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/ListaOrdini.jsp" />
+        <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/index.jsp" />
+        <option value="$PROJECT_DIR$/Ordine.jsp" />
+        <option value="$PROJECT_DIR$/ListaFornitori.jsp" />
+        <option value="$PROJECT_DIR$/HomeCliente.jsp" />
+        <option value="$PROJECT_DIR$/DettaglioFornitore.jsp" />
+        <option value="$PROJECT_DIR$/ListaArticoli.jsp" />
       </list>
     </option>
   </component>
@@ -208,27 +153,6 @@
               <item name="projectWork" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projectWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projectWork" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projectWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projectWork" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projectWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projectWork" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -326,9 +250,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BookList.jsp" />
-    <entry file="file://$PROJECT_DIR$/index.jsp" />
-    <entry file="file://$PROJECT_DIR$/index.html" />
     <entry file="file://$PROJECT_DIR$/Error.jsp" />
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
     <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
@@ -444,13 +365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/META-INF/context.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -486,23 +400,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HomeCliente.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/src/controllers/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -544,20 +441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DettaglioFornitore.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ListaFornitori.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HomeFornitore.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="691">
@@ -592,34 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ListaOrdini.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Homepage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ordine.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/src/data/RigaOrdineDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="51" column="70" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WEB-INF/src/data/ArticoloTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="574">
@@ -638,10 +493,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ListaArticoli.jsp">
+    <entry file="file://$PROJECT_DIR$/WEB-INF/src/controllers/FornitoreZone.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+        <state relative-caret-position="134">
+          <caret line="65" column="40" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -655,27 +513,111 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/src/data/RigaOrdineDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="51" column="70" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WEB-INF/src/data/ArticoloDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+        <state relative-caret-position="726">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OrdineFornitore.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        <state relative-caret-position="264">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/src/controllers/FornitoreZone.java">
+    <entry file="jar://$PROJECT_DIR$/WEB-INF/lib/servlet-api.jar!/javax/servlet/http/HttpServletRequest.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="65" column="40" lean-forward="true" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
+        <state relative-caret-position="-924">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/WEB-INF/lib/servlet-api.jar!/javax/servlet/http/HttpServletRequestWrapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-894">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ListaOrdini.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="39" column="58" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ordine.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeCliente.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/src/controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ListaFornitori.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DettaglioFornitore.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ListaArticoli.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
         </state>
       </provider>
     </entry>
