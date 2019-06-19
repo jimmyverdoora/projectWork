@@ -48,6 +48,12 @@ public class RigaOrdineDAO extends DAO {
         performDBUpdate(query);
     }
 
+    public static void changePrezzoAndQuantita(int id, double prezzo, int quantita) {
+        String query = "UPDATE progettot1.rigaordine SET prezzounitario=" + prezzo + ", quantita=" + quantita +
+                " WHERE id=" + id + ";";
+        performDBUpdate(query);
+    }
+
     static int editRigaOrdine(int id, int ordine_id, int articolo_id, double prezzoUnitario, int quantita,
                                     String stato) {
         String query = ""; //TODO

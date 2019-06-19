@@ -42,7 +42,7 @@
                 </form>
             </table>
             <h2>
-                <a href="listaOrdini">Gestisci Ordini</a>
+                <a href="listaordini">Gestisci Ordini</a>
             </h2>
 </div>
 </body>

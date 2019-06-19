@@ -20,6 +20,7 @@
                 <td><c:out value="${articolo.nome}" /></td>
                 <td><c:out value="${articolo.tipo}" /></td>
                 <td><c:out value="${articolo.prezzo}" /></td>
+                <td><c:out value="${articolo.quantita}" /></td>
                 <td><c:out value="${articolo.descrizione}" /></td>
             </tr>
         </c:forEach>

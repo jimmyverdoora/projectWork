@@ -14,10 +14,11 @@ public class ArticoloDAO extends DAO {
         int id = rs.getInt("id");
         int listino_id = rs.getInt("listino_id");
         double prezzo = rs.getDouble("prezzo");
+        int quantita = rs.getInt("quantita");
         String nome = rs.getString("nome");
         String descrizione = rs.getString("descrizione");
         String tipo = rs.getString("tipo");
-        return new ArticoloTO(id, listino_id, prezzo, nome, descrizione, tipo);
+        return new ArticoloTO(id, listino_id, prezzo, quantita, nome, descrizione, tipo);
     }
 
     public static List<ArticoloTO> getArticoliByListinoId(int id) {
@@ -32,9 +33,18 @@ public class ArticoloDAO extends DAO {
         return castToArticolo(returnListOfTransferObjects(query));
     }
 
-    public static int createArticolo(int listino_id, double prezzo, String nome, String descrizione, String tipo) {
-        String query = "INSERT INTO progettot1.articolo (listino_id, prezzo, nome, descrizione, tipo) VALUES ('" +
-                listino_id + "', '" + prezzo + "', '" + nome + "', '" + descrizione + "', '" + tipo + "');";
+    public static int getQuantitaByRigaId(int id) {
+        String query = "SELECT * FROM progettot1.articolo WHERE articolo.id IN (" +
+                "SELECT articolo_id FROM progettot1.rigaordine WHERE rigaordine.id=" + id +
+                ");";
+        ArticoloTO articolo = castToArticolo(returnListOfTransferObjects(query)).get(0);
+        return articolo.getQuantita();
+    }
+
+    public static int createArticolo(int listino_id, double prezzo, int quantita, String nome, String descrizione, String tipo) {
+        String query = "INSERT INTO progettot1.articolo (listino_id, prezzo, quantita, nome, descrizione, tipo)" +
+                " VALUES ('" + listino_id + "', '" + prezzo + "', '" + quantita + "', '" + nome + "', '" +
+                descrizione + "', '" + tipo + "');";
         return performDBUpdate(query);
     }
 

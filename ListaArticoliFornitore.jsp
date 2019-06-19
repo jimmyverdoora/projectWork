@@ -20,6 +20,7 @@
                         <th>Nome</th>
                         <th>Tipo</th>
                         <th>Prezzo</th>
+                        <th>Disponibilita</th>
                         <th>Descrizione</th>
                      </tr>
                     <c:forEach var="articolo" items="${listaArticoli}">
@@ -27,6 +28,7 @@
                             <td><c:out value="${articolo.nome}" /></td>
                             <td><c:out value="${articolo.tipo}" /></td>
                             <td><c:out value="${articolo.prezzo}" /></td>
+                            <td><c:out value="${articolo.quantita}" /></td>
                             <td><c:out value="${articolo.descrizione}" /></td>
                         </tr>
                     </c:forEach>
@@ -37,6 +39,7 @@
                     <td><input id="nome" name="nome" type="text" /></td>
                     <td><input id="tipo" name="tipo" type="text" /></td>
                     <td><input id="prezzo" name="prezzo" type="text" /></td>
+                    <td><input id="quantita" name="quantita" type="text" /></td>
                     <td><input id="descrizione" name="descrizione" type="text" /></td>
                     <td><input name="Submit" type="submit" value="Crea" /></td>
                 </tr>

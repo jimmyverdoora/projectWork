@@ -21,6 +21,19 @@ public class OrdineDAO extends DAO {
         return castToOrdine(returnListOfTransferObjects(query));
     }
 
+    public static List<OrdineTO> getOrdiniByFornitoreId(int id) {
+        String query = "SELECT * FROM progettot1.ordine WHERE id IN (" +
+
+                "SELECT ordine_id FROM progettot1.rigaordine WHERE articolo_id IN (" +
+
+                "SELECT articolo.id FROM progettot1.articolo, progettot1.listino WHERE articolo.listino_id=" +
+                "listino.id AND listino.fornitore_id=" + id +
+
+                ")" +
+                ");";
+        return castToOrdine(returnListOfTransferObjects(query));
+    }
+
     public static int createOrdine(int cliente_id) {
         String query = "INSERT INTO progettot1.ordine (cliente_id) VALUES ('" +
                 cliente_id + "');";
