@@ -16,19 +16,28 @@ public class OrdineDAO extends DAO {
         return new OrdineTO(id, cliente_id);
     }
 
-    static List<TO> getOrdiniByClienteId(int id) {
-        String query = ""; // TODO
-        return returnListOfTransferObjects(query);
+    public static List<OrdineTO> getOrdiniByClienteId(int id) {
+        String query = "SELECT * FROM progettot1.ordine WHERE progettot1.ordine.cliente_id=" + id + ";";
+        return castToOrdine(returnListOfTransferObjects(query));
     }
 
-    static boolean createOrdine(int id, int fornitore_id) {
+    public static int createOrdine(int cliente_id) {
+        String query = "INSERT INTO progettot1.ordine (cliente_id) VALUES ('" +
+                cliente_id + "');";
+        return performDBUpdate(query);
+    }
+
+    static int deleteOrdine(int id) {
         String query = ""; //TODO
         return performDBUpdate(query);
     }
 
-    static boolean deleteOrdine(int id) {
-        String query = ""; //TODO
-        return performDBUpdate(query);
+    private static List<OrdineTO> castToOrdine(List<TO> lista) {
+        List<OrdineTO> newLista = new ArrayList<>();
+        for (TO elemento : lista) {
+            newLista.add((OrdineTO) elemento);
+        }
+        return newLista;
     }
 
     private static List<TO> returnListOfTransferObjects(String query) {

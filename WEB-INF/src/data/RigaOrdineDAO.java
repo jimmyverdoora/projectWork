@@ -20,26 +20,51 @@ public class RigaOrdineDAO extends DAO {
         return new RigaOrdineTO(id, ordine_id, articolo_id, prezzoUnitario, quantita, stato);
     }
 
-    static List<TO> getRigheOrdiniByOrdineId(int id) {
-        String query = ""; // TODO
-        return returnListOfTransferObjects(query);
+    public static List<RigaOrdineTO> getRigheOrdiniByFornitoreAndOrderId(int fornitoreId, int ordineId) {
+        String query = "SELECT * FROM progettot1.rigaordine WHERE (articolo_id IN (" +
+
+                "SELECT articolo.id FROM progettot1.articolo, progettot1.listino WHERE articolo.listino_id="
+                + "listino.id AND listino.fornitore_id=" + fornitoreId +
+
+                ") AND ordine_id=" + ordineId +");";
+        return castToRigaOrdine(returnListOfTransferObjects(query));
     }
 
-    static boolean createRigaOrdine(int id, int ordine_id, int articolo_id, double prezzoUnitario, int quantita,
+    public static RigaOrdineTO getRigaOrdineById(int id) {
+        String query = "SELECT * FROM progettot1.rigaordine WHERE id=" + id + ";";
+        return castToRigaOrdine(returnListOfTransferObjects(query)).get(0);
+    }
+
+    public static int createRigaOrdine(int ordine_id, int articolo_id, double prezzoUnitario, int quantita,
+                                    String stato) {
+        String query = "INSERT INTO progettot1.rigaordine (ordine_id, articolo_id, prezzounitario, quantita, stato)" +
+                " VALUES ('" + ordine_id + "', '" + articolo_id + "', '" + prezzoUnitario + "', '" + quantita +
+                "', '" + stato + "');";
+        return performDBUpdate(query);
+    }
+
+    public static void changeStato(int id,  String stato) {
+        String query = "UPDATE progettot1.rigaordine SET stato='" + stato + "' WHERE id=" + id + ";";
+        performDBUpdate(query);
+    }
+
+    static int editRigaOrdine(int id, int ordine_id, int articolo_id, double prezzoUnitario, int quantita,
                                     String stato) {
         String query = ""; //TODO
         return performDBUpdate(query);
     }
 
-    static boolean editRigaOrdine(int id, int ordine_id, int articolo_id, double prezzoUnitario, int quantita,
-                                    String stato) {
+    static int deleteRigaOrdine(int id) {
         String query = ""; //TODO
         return performDBUpdate(query);
     }
 
-    static boolean deleteRigaOrdine(int id) {
-        String query = ""; //TODO
-        return performDBUpdate(query);
+    private static List<RigaOrdineTO> castToRigaOrdine(List<TO> lista) {
+        List<RigaOrdineTO> newLista = new ArrayList<>();
+        for (TO elemento : lista) {
+            newLista.add((RigaOrdineTO) elemento);
+        }
+        return newLista;
     }
 
     private static List<TO> returnListOfTransferObjects(String query) {

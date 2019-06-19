@@ -19,28 +19,28 @@ public class ListinoDAO extends DAO {
     }
 
     public static List<ListinoTO> getListiniByFornitoreId(int id) {
-        String query = "SELECT * FROM progetto.listino WHERE progetto.listino.fornitore_id=" + id + ";";
+        String query = "SELECT * FROM progettot1.listino WHERE progettot1.listino.fornitore_id=" + id + ";";
         return castToListino(returnListOfTransferObjects(query));
     }
 
     public static ListinoTO getListinoById(int id) {
-        String query = "SELECT * FROM progetto.listino WHERE progetto.listino.id=" + id + ";";
+        String query = "SELECT * FROM progettot1.listino WHERE progettot1.listino.id=" + id + ";";
         return castToListino(returnListOfTransferObjects(query)).get(0);
     }
 
-    public static boolean createListino(int fornitore_id, String nome, String descrizione) {
-        String query = "INSERT INTO progetto.listino (fornitore_id, nome, descrizione) VALUES ('" +
+    public static int createListino(int fornitore_id, String nome, String descrizione) {
+        String query = "INSERT INTO progettot1.listino (fornitore_id, nome, descrizione) VALUES ('" +
                 fornitore_id + "', '" + nome + "', '" + descrizione + "');";
         return performDBUpdate(query);
     }
 
-    public static boolean editListino(int id, int fornitore_id, String nome, String descrizione) {
+    public static int editListino(int id, int fornitore_id, String nome, String descrizione) {
         // id is the id of the fornitore to be edited, the fields are the new fields, if a field is "", no edit
         String query = ""; //TODO
         return performDBUpdate(query);
     }
 
-    public static boolean deleteListino(int id) {
+    public static int deleteListino(int id) {
         String query = ""; //TODO
         return performDBUpdate(query);
     }

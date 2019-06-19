@@ -10,7 +10,7 @@ import java.util.List;
 public class AdminDAO extends DAO {
 
     public static int isAdminPresent(String username, String password) {
-        String query = "SELECT * FROM progetto.admin WHERE username='" + username +
+        String query = "SELECT * FROM progettot1.admin WHERE username='" + username +
                 "' AND password='" + password + "';";
         List<AdminTO> admins = castToAdmin(returnListOfTransferObjects(query));
         if (admins.size() > 0) {
@@ -19,8 +19,8 @@ public class AdminDAO extends DAO {
         return -1;
     }
 
-    public static boolean createAdmin(String username, String password) {
-        String query = "INSERT INTO progetto.admin (username, password) VALUES ('" +
+    public static int createAdmin(String username, String password) {
+        String query = "INSERT INTO progettot1.admin (username, password) VALUES ('" +
                 username + "', '" + password + "');";
         return performDBUpdate(query);
     }

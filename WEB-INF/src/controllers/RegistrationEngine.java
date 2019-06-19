@@ -33,13 +33,13 @@ class RegistrationEngine {
 
 
         if (ruolo.equals("cliente")) {
-            return ClienteDAO.createCliente(username, password, nome, descrizione, email);
+            return (ClienteDAO.createCliente(username, password, nome, descrizione, email) > 0);
         }
         else if (ruolo.equals("fornitore")) {
-            return FornitoreDAO.createFornitore(username, password, nome, descrizione, email);
+            return (FornitoreDAO.createFornitore(username, password, nome, descrizione, email) > 0);
         }
         else if (ruolo.equals("admin")) {
-            return AdminDAO.createAdmin(username, password);
+            return (AdminDAO.createAdmin(username, password) > 0);
         }
         else {
             return false;

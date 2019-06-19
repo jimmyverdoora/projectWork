@@ -21,7 +21,7 @@ public class ClienteDAO extends DAO {
     }
 
     public static int isClientePresent(String username, String password) {
-        String query = "SELECT * FROM progetto.cliente WHERE username='" + username +
+        String query = "SELECT * FROM progettot1.cliente WHERE username='" + username +
                 "' AND password='" + password + "';";;
         List<ClienteTO> clienti = castToCliente(returnListOfTransferObjects(query));
         if (clienti.size() > 0) {
@@ -35,21 +35,21 @@ public class ClienteDAO extends DAO {
         return returnListOfTransferObjects(query);
     }
 
-    public static boolean createCliente(String username, String password, String nome, String descrizione,
+    public static int createCliente(String username, String password, String nome, String descrizione,
                                    String email) {
-        String query = "INSERT INTO progetto.cliente (username, password, nome, descrizione, email) VALUES ('" +
+        String query = "INSERT INTO progettot1.cliente (username, password, nome, descrizione, email) VALUES ('" +
                 username + "', '" + password + "', '" + nome + "', '" + descrizione + "', '" + email + "');";
         return performDBUpdate(query);
     }
 
-    public static boolean editCliente(int id, String username, String password, String nome, String descrizione,
+    public static int editCliente(int id, String username, String password, String nome, String descrizione,
                                    String email) {
         // id is the id of the fornitore to be edited, the fields are the new fields, if a field is "", no edit
         String query = ""; //TODO
         return performDBUpdate(query);
     }
 
-    public static boolean deleteCliente(int id) {
+    public static int deleteCliente(int id) {
         String query = ""; //TODO
         return performDBUpdate(query);
     }

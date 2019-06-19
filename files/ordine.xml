@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderStructure>
+<Suppliers>
+<Supplier>
+<FornitoreId>321</FornitoreId>
+</Supplier>
+<Supplier>
+<FornitoreId>645</FornitoreId>
+</Supplier>
+<Supplier>
+<FornitoreId>987</FornitoreId>
+</Supplier>
+</Suppliers>
+<OrderHeader>
+<CustomerId>456</CustomerId>
+</OrderHeader>
+<Order>
+<OrderNumber>001</OrderNumber>
+<OrderLines>
+<!-- Order Line 1 -->
+<OrderLine>
+<OrderLineNumber>001</OrderLineNumber>
+<ItemCode>5</ItemCode>
+<ItemDescription>bullone senza testa</ItemDescription>
+<ItemQty>100</ItemQty>
+<ItemPrice>5</ItemPrice>
+<state>OPEN </state>
+</OrderLine>
+<!-- Order Line 2 -->
+<OrderLine>
+<OrderLineNumber>002</OrderLineNumber>
+<ItemCode>2</ItemCode>
+<ItemDescription>dato filettato</ItemDescription>
+<ItemQty>45</ItemQty>
+<ItemPrice>9</ItemPrice>
+<state>OPEN </state>
+</OrderLine>
+<!-- Order Line 3 -->
+<OrderLine>
+<OrderLineNumber>003</OrderLineNumber>
+<ItemCode>4</ItemCode>
+<ItemDescription>dado da filettare</ItemDescription>
+<ItemQty>77</ItemQty>
+<ItemPrice>21</ItemPrice>
+<state>OPEN </state>
+</OrderLine>
+</OrderLines>
+</Order>
+</OrderStructure>

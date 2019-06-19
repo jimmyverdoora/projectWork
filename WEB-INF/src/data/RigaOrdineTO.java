@@ -5,15 +5,15 @@ public class RigaOrdineTO implements TO{
     private int id;
     private int ordine_id;
     private int articolo_id;
-    private double prezzUnitario;
+    private double prezzoUnitario;
     private int quantita;
     private String stato;
 
-    RigaOrdineTO(int id, int ordine_id, int articolo_id, double prezzUnitario, int quantita, String stato) {
+    RigaOrdineTO(int id, int ordine_id, int articolo_id, double prezzoUnitario, int quantita, String stato) {
         this.id = id;
         this.ordine_id = ordine_id;
         this.articolo_id = articolo_id;
-        this.prezzUnitario = prezzUnitario;
+        this.prezzoUnitario = prezzoUnitario;
         this.quantita = quantita;
         this.stato = stato;
     }
@@ -30,8 +30,8 @@ public class RigaOrdineTO implements TO{
         return articolo_id;
     }
 
-    public double getPrezzUnitario() {
-        return prezzUnitario;
+    public double getPrezzoUnitario() {
+        return prezzoUnitario;
     }
 
     public int getQuantita() {

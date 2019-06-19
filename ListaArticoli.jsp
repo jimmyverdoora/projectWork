@@ -23,5 +23,6 @@
                 <td><c:out value="${articolo.descrizione}" /></td>
             </tr>
         </c:forEach>
+    </table>
 </body>
 </html>

@@ -14,5 +14,5 @@
           password="root"
           driverClassName="com.mysql.cj.jdbc.Driver"
           connectionProperties="serverTimezone=Europe/Rome"
-          url="jdbc:mysql://root:root@192.168.8.55/progetto"/>
+          url="jdbc:mysql://root:root@192.168.8.55/progettot1"/>
 </Context>

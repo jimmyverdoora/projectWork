@@ -7,20 +7,25 @@ import log.Generic;
 
 class DAO {
 
-    static boolean performDBUpdate(String query) {
+    static int performDBUpdate(String query) {
+        int key = -1;
         try {
 
             Connection conn = DBUtil.getDataSource().getConnection();
             Statement stmt;
             stmt = conn.createStatement();
-            stmt.executeUpdate(query);
+            stmt.executeUpdate(query, Statement.RETURN_GENERATED_KEYS);
+            ResultSet keys = stmt.getGeneratedKeys();
+            if (keys.next()) {
+                key = keys.getInt(1);
+            }
             stmt.close();
             conn.close();
         } catch (SQLException e) {
             e.printStackTrace();
-            return false;
+            return -1;
         }
-        return true;
+        return key;
     }
 
 }
