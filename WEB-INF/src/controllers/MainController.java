@@ -26,12 +26,7 @@ public class MainController extends HttpServlet {
             throws ServletException, IOException {
 
         String action = request.getRequestURI();
-        Generic.log("a", "b", action);
         String[] actions = action.split("/");
-        actions[1] = actions[2];
-        if (actions.length > 3) {
-            actions[2] = actions[3];
-        }
 
         if (actions[1].equals("cliente") && request.getSession().getAttribute("ruolo").equals("cliente")) {
             ClienteZone.execAction(actions[2], request, response);
