@@ -11,6 +11,8 @@
 </head>
 <body>
 
+<%@include file="../nav.jsp" %>
+
 <div class="myContainer2" align="center">
 
 <h1>Area Clienti</h1>

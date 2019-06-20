@@ -9,6 +9,8 @@
 </head>
 <body>
 
+<%@include file="../nav.jsp" %>
+
 <div class="myContainer3" align="center">
 
 <h1>Area Fornitori</h1>
@@ -35,6 +37,7 @@
                             <td><c:out value="${articolo.prezzo}" /></td>
                             <td><c:out value="${articolo.quantita}" /></td>
                             <td><c:out value="${articolo.descrizione}" /></td>
+                            <td></td>
                         </tr>
                     </c:forEach>
 
