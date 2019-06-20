@@ -1,5 +1,9 @@
-body {
+html {
     height: 100%;
+}
+
+body {
+    height: 100% !important;
     background-image: linear-gradient(#ffffff, #cce4ff);
 }
 
@@ -34,4 +38,29 @@ td, th {
 .myContainer2 {
     margin-left: 25%;
     margin-right: 25%;
+}
+
+.myContainer3 {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.open {
+    color: #542fd8;
+    font-weight: bold;
+}
+
+.modificata {
+    color: #d8c12e;
+    font-weight: bold;
+}
+
+.rigettata {
+    color: #d82d2d;
+    font-weight: bold;
+}
+
+.confermata {
+    color: #2dd846;
+    font-weight: bold;
 }

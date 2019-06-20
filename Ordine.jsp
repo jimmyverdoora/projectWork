@@ -9,12 +9,15 @@
 </head>
 <body>
 
-<div class="myContainer" align="center">
+<div class="myContainer2" align="center">
 
     <h1>Ordine numero ${idOrdine}</h1>
     <c:forEach var="fornitore" items="${listaFornitori}">
         <h3>Fornitore: ${fornitore.nome}</h3>
-        <table class="mb-3">
+<div class="card mb-3">
+    <div class="table-responsive">
+    <table class="table table-bordered table-striped mb-0">
+
             <tr>
                 <th>Nome</th>
                 <th>Quantita</th>
@@ -28,9 +31,24 @@
                     <td><c:out value="${mappaArticoli.get(riga.articolo_id)}" /></td>
                     <td><c:out value="${riga.quantita}" /></td>
                     <td><c:out value="${riga.prezzoUnitario}" /></td>
-                    <td><c:out value="${riga.stato}" /></td>
 
+                    <c:if test = "${riga.stato.equals('OPEN')}">
+                        <td class="open">OPEN</td>
+                        <td></td>
+                        <td></td>
+                    </c:if>
+                    <c:if test = "${riga.stato.equals('RIGETTATA')}">
+                        <td class="rigettata">RIGETTATA</td>
+                        <td></td>
+                        <td></td>
+                    </c:if>
+                    <c:if test = "${riga.stato.equals('CONFERMATA')}">
+                        <td class="confermata">CONFERMATA</td>
+                        <td></td>
+                        <td></td>
+                    </c:if>
                     <c:if test = "${riga.stato.equals('MODIFICATA')}">
+                        <td class="modificata">MODIFICATA</td>
                         <td><form action="conferma" method="post">
                             <input type="hidden" name="rid" value="${riga.id}">
                             <input class="btn btn-primary" name="Submit" type="submit" value="Conferma">
@@ -43,6 +61,8 @@
                 </tr>
             </c:forEach>
         </table>
+        </div>
+    </div>
     </c:forEach>
 
 </div>

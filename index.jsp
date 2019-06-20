@@ -15,8 +15,8 @@
 <BODY>
 
 <div class="myContainer" align="center">
-
-<h1>Benvenuti nel nostro Sito!</h1>
+<h1 style="font-size: 100px;">DEEPIUNGO</h1>
+<h2 class="mb-5">An absolutely legit website!</h5>
 
 <div class="row">
 <div class="col-6">

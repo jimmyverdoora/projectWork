@@ -9,12 +9,14 @@
 </head>
 <body>
 
-<div class="myContainer" align="center">
+<div class="myContainer2" align="center">
 
 <h1>Area Clienti</h1>
 <h3>Fornitore ${fornitore.nome}</h3>
 <p>${fornitore.descrizione}</p>
-    <table>
+<div class="card">
+    <div class="table-responsive">
+    <table class="table table-bordered table-striped mb-0">
 
         <tr>
             <th>Nome</th>
@@ -34,6 +36,9 @@
             </tr>
         </c:forEach>
 
+        </table>
+        </div>
     </div>
+</div>
 </body>
 </html>

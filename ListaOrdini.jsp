@@ -29,16 +29,30 @@
 </div>
 <div class="col-6">
 <h3 class="mb-3">I tuoi Ordini</h3>
+<div class="card">
+    <div class="table-responsive">
+    <table class="table table-bordered table-striped mb-0">
+
+        <tr>
+            <th>Id Ordine</th>
+            <th>Seleziona</th>
+        </tr>
 
         <c:forEach var="ordine" items="${listaOrdini}">
-            <form action="ordine" method="post">
-                <input type="hidden" name="ordineId" value="${ordine.id}">
-                <input class="btn btn-primary mb-2" name="Submit" type="submit" value="Ordine numero ${ordine.id}">
-            </form>
-
+            <tr>
+                <td>Ordine numero <c:out value="${ordine.id}" /></td>
+                <td>
+                    <form action="ordine" method="post">
+                        <input type="hidden" name="ordineId" value="${ordine.id}">
+                        <input class="btn btn-primary" name="Submit" type="submit" value="Vedi">
+                    </form>
+                </td>
+            </tr>
         </c:forEach>
 
     </table>
+</div>
+</div>
 
 </div>
 </div>

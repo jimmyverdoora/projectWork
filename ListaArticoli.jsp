@@ -4,18 +4,20 @@
 <html>
 
 <head>
-    <title>Fornitori</title>
+    <title>Cliente</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css" type="text/css">
 </head>
 <body>
 
-<div class="myContainer" align="center">
+<div class="myContainer3" align="center">
 
 <h1>Area Clienti</h1>
 <h3>Fornitore ${fornitore.nome} - Listino ${listino.nome}</h3>
 <p>${listino.descrizione}</p>
-    <table>
+<div class="card">
+    <div class="table-responsive">
+    <table class="table table-bordered table-striped mb-0">
         <tr>
             <th>Nome</th>
             <th>Tipo</th>
@@ -33,6 +35,8 @@
             </tr>
         </c:forEach>
     </table>
+    </div>
+    </div>
 
 </div>
 </body>

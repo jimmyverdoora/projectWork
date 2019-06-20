@@ -12,31 +12,40 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Insert title here</title>
+    <title>Fornitore</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css" type="text/css">
 </head>
 <body>
 
-    <table>
-        <h1>I Tuoi Ordini</h1>
-        <tr>
-            <th>Id Ordine</th>
-            <th>Seleziona</th>
-        </tr>
+<div class="myContainer" align="center">
 
-        <c:forEach var="ordine" items="${listaOrdini}">
+<h1>Area Fornitori</h1>
+
+<h3 class="mb-3">I tuoi Ordini</h3>
+<div class="card">
+    <div class="table-responsive">
+    <table class="table table-bordered table-striped mb-0">
             <tr>
-                <td><c:out value="${ordine.id}" /></td>
-                <td>
-                    <form action="ordine" method="post">
-                        <input type="hidden" name="ordineId" value="${ordine.id}">
-                        <input name="Submit" type="submit" value="Vedi">
-                    </form>
-                </td>
+                <th>Id Ordine</th>
+                <th>Seleziona</th>
             </tr>
-        </c:forEach>
 
-    </table>
+            <c:forEach var="ordine" items="${listaOrdini}">
+                <tr>
+                    <td>Ordine numero <c:out value="${ordine.id}" /></td>
+                    <td>
+                        <form action="ordine" method="post">
+                            <input type="hidden" name="ordineId" value="${ordine.id}">
+                            <input class="btn btn-primary" name="Submit" type="submit" value="Vedi">
+                        </form>
+                    </td>
+                </tr>
+            </c:forEach>
+
+        </table>
+
+</div>
 
 </body>
 </html>
