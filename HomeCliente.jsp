@@ -9,6 +9,8 @@
 </head>
 <body>
 
+<%@include file="../nav.jsp" %>
+
 <div class="myContainer" align="center">
 
 <h1>Area Clienti</h1>

@@ -35,6 +35,7 @@
                             <td><c:out value="${articolo.prezzo}" /></td>
                             <td><c:out value="${articolo.quantita}" /></td>
                             <td><c:out value="${articolo.descrizione}" /></td>
+                            <td></td>
                         </tr>
                     </c:forEach>
 
