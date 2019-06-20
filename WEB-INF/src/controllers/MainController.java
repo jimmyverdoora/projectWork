@@ -27,7 +27,8 @@ public class MainController extends HttpServlet {
 
         String action = request.getRequestURI();
         String[] actions = action.split("/");
-        
+        Generic.log("a", "b", action);
+
         if (actions[1].equals("cliente") && request.getSession().getAttribute("ruolo").equals("cliente")) {
             ClienteZone.execAction(actions[2], request, response);
         }

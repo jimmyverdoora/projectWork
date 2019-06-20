@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c32dcea4-b401-4c79-ad31-57b9e2e6c3c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/META-INF/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/classes/controllers/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/data/ClienteDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/classes/data/ClienteDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/data/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/classes/data/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/src/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/src/data/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/src/data/DAO.java" afterDir="false" />
-    </list>
+    <list default="true" id="c32dcea4-b401-4c79-ad31-57b9e2e6c3c4" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WEB-INF/src/controllers/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+            <state relative-caret-position="220">
+              <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,15 +49,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="594">
               <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/META-INF/context.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -136,10 +120,10 @@
         <option value="$PROJECT_DIR$/OrdineFornitore.jsp" />
         <option value="$PROJECT_DIR$/index.jsp" />
         <option value="$PROJECT_DIR$/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/WEB-INF/src/controllers/MainController.java" />
         <option value="$PROJECT_DIR$/WEB-INF/src/data/DAO.java" />
         <option value="$PROJECT_DIR$/META-INF/context.xml" />
         <option value="$PROJECT_DIR$/WEB-INF/src/data/ClienteDAO.java" />
+        <option value="$PROJECT_DIR$/WEB-INF/src/controllers/MainController.java" />
       </list>
     </option>
   </component>
@@ -621,23 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/src/controllers/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Ordine.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
@@ -659,6 +626,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/src/controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
