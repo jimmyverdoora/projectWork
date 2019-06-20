@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c32dcea4-b401-4c79-ad31-57b9e2e6c3c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/DettaglioFornitore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/DettaglioFornitore.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeCliente.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/HomeCliente.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeFornitore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/HomeFornitore.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ListaArticoli.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ListaArticoli.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ListaArticoliFornitore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ListaArticoliFornitore.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ListaFornitori.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ListaFornitori.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ListaOrdini.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ListaOrdini.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ListaOrdiniFornitore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ListaOrdiniFornitore.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ordine.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Ordine.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrdineFornitore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/OrdineFornitore.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="c32dcea4-b401-4c79-ad31-57b9e2e6c3c4" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+            <state relative-caret-position="396">
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -626,8 +613,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        <state relative-caret-position="396">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
         </state>
       </provider>
     </entry>
