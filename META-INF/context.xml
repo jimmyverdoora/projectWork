@@ -10,9 +10,9 @@
           maxWait="10000"
           initialSize="10"
           jmxEnabled="true"
-          username="root"
-          password="root"
+          username="dbmasteruser"
+          password="LOLGG54LOL"
           driverClassName="com.mysql.cj.jdbc.Driver"
           connectionProperties="serverTimezone=Europe/Rome"
-          url="jdbc:mysql://root:root@192.168.8.55/progettot1"/>
+    url="jdbc:mysql://ls-7eceddbcc3ebb0218c1ca0094e5732bb6afdd6ac.c7vhzuk2k9zy.eu-central-1.rds.amazonaws.com"/>
 </Context>

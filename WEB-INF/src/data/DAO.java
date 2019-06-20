@@ -21,7 +21,8 @@ class DAO {
             }
             stmt.close();
             conn.close();
-        } catch (SQLException e) {
+        } catch (SQLException | NullPointerException e) {
+            Generic.log("a", "b", e.getMessage());
             e.printStackTrace();
             return -1;
         }
