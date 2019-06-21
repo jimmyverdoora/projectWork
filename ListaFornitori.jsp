@@ -26,7 +26,6 @@
             <th>Descrizione</th>
             <th>Email</th>
             <th>Dettagli</th>
-            <th>Seleziona</th>
         </tr>
 
         <c:forEach var="fornitore" items="${listaFornitori}">
